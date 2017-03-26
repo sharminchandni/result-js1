@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShowResult</title>
+    <link rel="shortcut icon" href="images/js.png">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+ <div class="container">
+ <div class="row">
+ <h1>Input Marks To Show Reault</h1>
+ <div class="col-sm-6" class="hom">
+ 	<input type="text" name="number" id="ResultNumber" class="form-control">
+	<button type="button" onclick="ClckResult();" class="btn btn-custom1" class="form-control">
+	<span>Show Result</span></button>
+	<button type="button" class=" btn btn-custom" class="form-control"><p id="ResultShow"> </p>
+	</button>
+</div>
+</div>
+</div>
+
+
+<script>
+function ClckResult(){
+var a=document.getElementById("ResultNumber").value;
+
+if (a<=100) {
+document.getElementById("ResultShow").innerHTML="A+";
+if (a<=79) {
+document.getElementById("ResultShow").innerHTML="A";
+if (a<=69) {
+document.getElementById("ResultShow").innerHTML="A-";
+if (a<=59) {
+document.getElementById("ResultShow").innerHTML="B";
+if (a<=49) {
+document.getElementById("ResultShow").innerHTML="C";
+if (a<=39) {
+document.getElementById("ResultShow").innerHTML="D";
+if (a<=32) {
+document.getElementById("ResultShow").innerHTML="F";
+}
+}
+}
+}
+}
+}
+}
+else{
+document.getElementById("ResultShow").innerHTML="Invalid";
+}
+
+}
+
+  
+</script>
+
+</body>
+</html>
